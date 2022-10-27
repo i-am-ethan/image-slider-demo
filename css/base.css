@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+main{
+  position: relative;
+  margin: 48px auto;
+}
+
+main, #content, #slider{
+  width: calc(1250px/2);
+  height: calc(700px/2);
+  pointer-events: none;
+  /* cursor: pointer; */
+}
+em{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 32px;
+  pointer-events: none;
+}
+.dg{
+  display: none;
+}
