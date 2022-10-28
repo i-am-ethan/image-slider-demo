@@ -1,6 +1,6 @@
 
 class Sketch {
-  constructor(opts) {
+  constructor(opts,contentElementId,sliderElementId) {
     this.scene = new THREE.Scene();
     this.vertex = `varying vec2 vUv;void main() {vUv = uv;gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );}`;
     this.fragment = opts.fragment;
@@ -15,8 +15,10 @@ class Sketch {
     this.debug = opts.debug || false
     this.easing = opts.easing || 'easeInOut'
 
-    this.clicker = document.getElementById("content");
-    this.container = document.getElementById("slider");
+    this.clicker = document.getElementById(contentElementId);
+    this.container = document.getElementById(sliderElementId);
+    // this.clicker = document.getElementById("content");
+    // this.container = document.getElementById("slider");
     this.images = JSON.parse(this.container.getAttribute('data-images'));
 
     this.width = this.container.offsetWidth;
